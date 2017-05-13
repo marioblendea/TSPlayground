@@ -13,15 +13,13 @@ export class LexicographicOrder {
         current *= 10;
       } else {
         current++;
+        while (current % 10 === 0) {
+          current = Math.floor(current / 10);
+          if (current <= 1) return result;
+        }
         if (current > n) {
           current = Math.floor(current / 10) + 1;
           if (current <= 1) return result;
-        }
-        else {
-          while (current % 10 === 0) {
-            current = Math.floor(current / 10);
-            if (current <= 1) return result;
-          }
         }
       }
     }
