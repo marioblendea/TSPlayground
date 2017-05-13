@@ -6,8 +6,10 @@
     {
       "taskName": "tsc",
       "command": "tsc",
+      "isBackground": true,
       "isShellCommand": true,
       "args": [
+        "-w",
         "-p",
         "."
       ],
