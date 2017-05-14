@@ -19,10 +19,10 @@ gulp.task('ts', () => {
     pipe(gulp.dest('bin'));
 })
 
-gulp.task('test', () => {
-  gulp.src('bin/**/*.spec.js', {read: false}).pipe(mocha({reporter: 'nyan'}));
+gulp.task('test', ['ts'], () => {
+  gulp.src('bin/**/*.spec.js', {read: false}).pipe(mocha({reporter: 'spec'}));
 });
 
-gulp.task('watch', ['ts', 'test'], () => {
-  gulp.watch('src/**/*.ts', ['ts', 'test']);
+gulp.task('watch', ['test'], () => {
+  gulp.watch('src/**/*.ts', ['test']);
 });

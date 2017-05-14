@@ -21,7 +21,6 @@ describe("Coins", () => {
     expect(Coins.GetCoins(5, [3, 2, 1])).to.be.equal(5);
     expect(Coins.GetCoins(5, [5, 2, 1])).to.be.equal(4);
     expect(Coins.GetCoins(3, [2])).to.be.equal(0);
-    expect(Coins.GetCoins(3, [2])).to.be.equal(5);
   });
 
 });
