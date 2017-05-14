@@ -13,13 +13,23 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
+    "gulp-mocha": "^4.3.1",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-typescript": "^3.1.6",
+    "gulp-watch": "^4.3.11",
     "mocha": "^3.3.0",
     "ts-node": "^3.0.2",
     "typings": "^2.1.1"
   },
   "dependencies": {
+    "blue-tape": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^4.3.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-typescript": "^3.1.6",
+    "mocha": "^3.3.0",
+    "proxyquire": "^1.7.11",
+    "server-address": "^1.0.4",
     "tsc": "^1.20150623.0",
     "typescript": "^2.3.1"
   }
