@@ -9,7 +9,6 @@ gulp.task('default', ['ts'], () => {
 });
 
 gulp.task('ts', () => {
-  console.log(sourcemaps);
   let tsResult = tsProject.src().
     pipe(sourcemaps.init()).
     pipe(tsProject());
