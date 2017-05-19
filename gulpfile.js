@@ -2,10 +2,9 @@ let gulp = require('gulp');
 let ts = require('gulp-typescript');
 let sourcemaps = require('gulp-sourcemaps');
 let mocha = require('gulp-mocha');
-
 let tsProject = ts.createProject('tsconfig.json');
 
-gulp.task('default', ['ts', 'test'], () => {
+gulp.task('default', ['test'], () => {
   console.log('default');
 });
 
@@ -20,7 +19,9 @@ gulp.task('ts', () => {
 })
 
 gulp.task('test', ['ts'], () => {
-  gulp.src('bin/**/*.spec.js', {read: false}).pipe(mocha({reporter: 'spec'}));
+  //console.log("mocha:" + mocha());
+  //console.log(gulp.src('bin/**/*.spec.js', {read: false}));
+   gulp.src('bin/**/*.spec.js', {read: false}).pipe(mocha({reporter: 'dot'}));
 });
 
 gulp.task('watch', ['test'], () => {
