@@ -1,6 +1,6 @@
 "use strict";
 import { expect } from "chai";
-import {FindIndexWithEqualProbability} from "./findIndex"
+import {FindIndexWithEqualProbability} from "./findIndex";
 
 describe("Given an array with integers (including duplicates) and a given integer V", () => {
     it("should return an index for which arr[index] = V, with equal probability", () => {
