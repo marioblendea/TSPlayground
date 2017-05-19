@@ -15,6 +15,7 @@
     "gulp": "^3.9.1",
     "gulp-mocha": "^4.3.1",
     "gulp-sourcemaps": "^2.6.0",
+    "gulp-tslint": "^8.0.0",
     "gulp-typescript": "^3.1.6",
     "gulp-watch": "^4.3.11",
     "mocha": "^3.3.0",

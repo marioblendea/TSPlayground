@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { SubarrayOfSumK } from './subarrayOfSumK'
+import { SubarrayOfSumK } from './subarrayOfSumK';
 
 describe("Continuous subarray of sum K", () => {
   it("should calculate the count of all continous subarrays of sum K in the given array", () => {

@@ -3,12 +3,13 @@ let ts = require('gulp-typescript');
 let sourcemaps = require('gulp-sourcemaps');
 let mocha = require('gulp-mocha');
 let tsProject = ts.createProject('tsconfig.json');
+let tslint = require("gulp-tslint");
 
 gulp.task('default', ['test'], () => {
   console.log('default');
 });
 
-gulp.task('ts', () => {
+gulp.task('ts', ['tslint'], () => {
   let tsResult = tsProject.src().
     pipe(sourcemaps.init()).
     pipe(tsProject());
@@ -19,11 +20,18 @@ gulp.task('ts', () => {
 })
 
 gulp.task('test', ['ts'], () => {
-  //console.log("mocha:" + mocha());
-  //console.log(gulp.src('bin/**/*.spec.js', {read: false}));
    gulp.src('bin/**/*.spec.js', {read: false}).pipe(mocha({reporter: 'dot'}));
 });
 
 gulp.task('watch', ['test'], () => {
   gulp.watch('src/**/*.ts', ['test']);
 });
+
+ 
+gulp.task("tslint", () =>
+    tsProject.src()
+        .pipe(tslint({
+            formatter: "verbose"
+        }))
+        .pipe(tslint.report())
+);

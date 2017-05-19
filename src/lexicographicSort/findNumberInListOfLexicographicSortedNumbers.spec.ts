@@ -1,8 +1,8 @@
+"use strict";
 import { expect } from "chai";
 import { FindNumberInListOfLexicographicSortedNumbers } from "./findNumberInListOfLexicographicSortedNumbers";
 import { LexicographicOrder } from "./listNumbersInLexicographicOrder";
 
-"use strict";
 
 describe("Lexicographic order", () => {
   it("should find K-th element in a list of numbers less than N", () => {

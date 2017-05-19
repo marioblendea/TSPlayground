@@ -1,8 +1,8 @@
 "use strict";
 
 interface Min{
-  value: number,
-  index: number
+  value: number;
+  index: number;
 }
 
 export class MaxRectangle {
