@@ -1,5 +1,6 @@
 "use strict";
 
+
 export class ChooseNumber{
   static canFirstPlayerWin(arr: number[]): boolean {
     const dp: number[][] = new Array(arr.length);
