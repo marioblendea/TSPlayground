@@ -5,9 +5,6 @@ let mocha = require('gulp-mocha');
 let tsProject = ts.createProject('tsconfig.json');
 let tslint = require("gulp-tslint");
 
-gulp.task('default', ['test'], () => {
-});
-
 gulp.task('ts', ['tslint'], () => {
   let tsResult = tsProject.src().
     pipe(sourcemaps.init()).
@@ -18,7 +15,7 @@ gulp.task('ts', ['tslint'], () => {
     pipe(gulp.dest('bin'));
 })
 
-gulp.task('test', ['ts'], () => {
+gulp.task('default', ['ts'], () => {
    gulp.src('bin/**/*.spec.js', {read: false}).pipe(mocha({reporter: 'dot'}));
 });
 
