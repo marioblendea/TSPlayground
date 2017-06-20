@@ -6,7 +6,6 @@ let tsProject = ts.createProject('tsconfig.json');
 let tslint = require("gulp-tslint");
 
 gulp.task('default', ['test'], () => {
-  console.log('default');
 });
 
 gulp.task('ts', ['tslint'], () => {
