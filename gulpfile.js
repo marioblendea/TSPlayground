@@ -19,8 +19,8 @@ gulp.task('default', ['ts'], () => {
    gulp.src('bin/**/*.spec.js', {read: false}).pipe(mocha({reporter: 'dot'}));
 });
 
-gulp.task('watch', ['test'], () => {
-  gulp.watch('src/**/*.ts', ['test']);
+gulp.task('watch', ['default'], () => {
+  gulp.watch('src/**/*.ts', ['default']);
 });
 
  
