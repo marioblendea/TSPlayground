@@ -33,4 +33,31 @@ export class BitOperations {
     // same as:
     // return n & (~this.stripLowestSetBit(n));
   }
+
+  public clearLowestKBits(n: number, k: number): number {
+    // 1<<k+1 => 0100000; -1 will flip all the 0s into 1s and the 1 into 0. Negate that and get the exactly needed mask
+    return n & (~((1 << (k+1)) - 1)); 
+  }
+
+  public clearBitsFromMSBToK(n: number, k: number): number {
+    return n & ((1 << k) - 1);
+  }
+
+  public devideBy2(n: number): number {
+    return n >> 1;
+  }
+
+  public multiplyBy2(n: number): number {
+    return n << 1;
+  }
+
+  public countSetBits(n: number): number {
+    let count = 0;
+    while(n > 0) {
+      n = this.stripLowestSetBit(n);
+      count++;
+    }
+    return count;
+  }
+
 }

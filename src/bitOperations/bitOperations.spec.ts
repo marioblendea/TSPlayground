@@ -45,8 +45,24 @@ describe("Bit Operations", () => {
     expect(bitOper.getLowestSetBit(10)).to.be.eq(2);
   });
   
-  it("should return the 2's complement", () => {
-    expect(bitOper.twosComplement(10)).to.be.eq(-10);
+  it("should clear all bits from LSB to k-th", () => {
+    expect(bitOper.clearLowestKBits(682, 5)).to.be.eq(640);
+  });
+
+  it("should clear all bits from MSB to k-th", () => {
+    expect(bitOper.clearBitsFromMSBToK(682, 5)).to.be.eq(10);
+  });
+
+  it("should devide by 2", () => {
+    expect(bitOper.devideBy2(682)).to.be.eq(341);
+  });
+
+  it("should multiply by 2", () => {
+    expect(bitOper.multiplyBy2(341)).to.be.eq(682);
+  });
+
+  it("should count the number of 1 bits", () => {
+    expect(bitOper.countSetBits(682)).to.be.eq(5);
   });
   
 });
