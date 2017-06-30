@@ -64,5 +64,14 @@ describe("Bit Operations", () => {
   it("should count the number of 1 bits", () => {
     expect(bitOper.countSetBits(682)).to.be.eq(5);
   });
+
+  it("should find log2(n)", () => {
+    expect(bitOper.log2(682)).to.be.eq(9);
+  });
+
+  it("should return true if n is power of 2", () => {
+    expect(bitOper.isPowerOf2(8)).to.be.eq(true);
+    expect(bitOper.isPowerOf2(9)).to.be.eq(false);
+  });
   
 });

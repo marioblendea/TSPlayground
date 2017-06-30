@@ -60,4 +60,16 @@ export class BitOperations {
     return count;
   }
 
+  public log2(n: number): number {
+    let count = -1;
+    while (n > 0) {
+      n >>= 1;
+      count++;
+    }
+    return count;
+  }
+
+  public isPowerOf2(n: number): boolean {
+    return (n && !(n & n-1));
+  }
 }
