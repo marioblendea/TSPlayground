@@ -15,7 +15,7 @@ export class LongestConsecutiveSequence {
       let maxCurr = rightLen + leftLen + 1; // the length of the sequence on the left + current element + the length of the sequence on the right
       max = maxCurr > max ? maxCurr : max; // update max if needed
       map[i - leftLen] = maxCurr; // fix the length for the sequence on the left
-      map[i + leftLen] = maxCurr; // fix the length for the sequence on the right
+      map[i + rightLen] = maxCurr; // fix the length for the sequence on the right
       if (leftLen > 0 && rightLen > 0) map[i] = maxCurr; // if leftLen and rightLen are > 0, map[i] is not updated on the prev 2 lines, so update it now
     }
     return max;

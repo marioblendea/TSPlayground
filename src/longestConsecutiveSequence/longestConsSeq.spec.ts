@@ -8,6 +8,7 @@ describe("Longest consecutive sequence", () => {
     const lcs = new LongestConsecutiveSequence();
     expect(lcs.get([100, 4, 200, 3, 1, 2])).to.be.equal(4);
     expect(lcs.get([100, 4, 200, 3, 1, 2, 3, 1])).to.be.equal(4);
-    expect(lcs.get([100, 4, 200, 3, 202, 202, 204, 1, 2, 205, 203, 199, 3, 1, 201])).to.be.equal(6);
+    expect(lcs.get([100, 4, 200, 3, 202, 202, 204, 1, 2, 205, 203, 199, 3, 1, 201])).to.be.equal(7);
+    expect(lcs.get([0, 3, 7, 2, 5, 8, 4, 6, 0, 1])).to.be.equal(9);
   });
 });
