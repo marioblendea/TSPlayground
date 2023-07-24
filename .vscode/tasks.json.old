@@ -1,28 +1,31 @@
 {
   // See https://go.microsoft.com/fwlink/?LinkId=733558
   // for the documentation about the tasks.json format
-  "version": "2.0.0",
+  "version": "0.1.0",
   "tasks": [
     {
-      "label": "tsc",
-      "type": "shell",
+      "taskName": "tsc",
       "command": "tsc",
+      "isBackground": true,
+      "isShellCommand": true,
       "args": [
         "-w",
         "-p",
         "."
       ],
-      "isBackground": true,
+      "showOutput": "silent",
       "problemMatcher": "$tsc",
-      "group": {
-        "_id": "build",
-        "isDefault": false
-      }
+      "echoCommand": true,
+      "isBuildCommand": true
     },
     {
-      "label": "mocha",
-      "type": "shell",
+      "taskName": "mocha",
+      "isBackground": false,
+      "isShellCommand": false,
+      "showOutput": "always",
+      "isTestCommand": true,
       "command": "node",
+      "echoCommand": true,
       "args": [
         "${workspaceRoot}/node_modules/mocha/bin/_mocha",
         "-u",
@@ -32,12 +35,7 @@
         "--colors",
         "--watch",
         "${workspaceRoot}/bin/**/**.spec.js"
-      ],
-      "problemMatcher": [],
-      "group": {
-        "_id": "test",
-        "isDefault": false
-      }
+      ]
     }
   ]
   
