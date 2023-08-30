@@ -5,28 +5,15 @@
   "main": "app.js",
   "directories": {},
   "scripts": {
-    "start": "node index.js",
-    "test": "node mocha"
+    "start": "node bin/index.js",
+    "build": "tsc",
+    "test": "mocha 'bin/src/**/*.spec.js' --recursive"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "gulp-tslint": "^8.0.0",
-    "gulp-watch": "^4.0.1",
-    "ts-node": "^3.0.2",
-    "tslint": "^5.2.0",
-    "typescript": "^2.4.2"
-  },
-  "dependencies": {
-    "blue-tape": "^1.0.0",
-    "gulp": "^3.9.1",
-    "gulp-mocha": "^8.0.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-typescript": "^2.12.2",
+    "chai": "^4.3.8",
     "mocha": "^10.2.0",
-    "mocha-cli": "^1.0.1",
-    "proxyquire": "^1.7.11",
-    "server-address": "^1.0.4"
+    "typescript": "^5.2.2"
   }
 }
